@@ -22,6 +22,7 @@ toolchain:
     getting_started:
       $ref: "#/messages/template.gettingStarted"
 services:
+  #REPO in Git Labs
   sample-repo:
     service_id: hostedgit
     parameters:
@@ -30,6 +31,7 @@ services:
       type: clone
       has_issues: true
       enable_traceability: true
+  #Pipeline
   sample-build:
     service_id: pipeline
     parameters:
@@ -47,8 +49,29 @@ services:
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
         execute: true
+  #Web IDE
   webide:
     service_id: orion
+  #Slack
+  slack:
+    service_id: slack
+  #SauceLabs
+  saucelabs:
+    service_id: saucelabs
+  #Trello
+  othertool-Trello:
+    service_id: customtool
+    parameters:
+      name: 'Trello'
+      description: 'Test App To Do'
+      type: 'Trello'
+      lifecyclePhase: 'THINK'
+      #imageUrl: trello.png
+      documentationUrl: 'https://tech.trello.com/'
+      dashboard_url: 'https://trello.com/b/vYfDPh37/tcsetup'
+  #Availability Monitoring
+  apm:
+    service_id: apm
 form:
   pipeline:
     parameters:
