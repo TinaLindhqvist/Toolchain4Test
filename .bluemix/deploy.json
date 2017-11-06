@@ -62,36 +62,12 @@
             "key": "sauce-username"
         },
         {
-            "type": "label",
-            "title": {
-            "$ref": "#/messages/region"
-            }
-        },
-        {
             "type": "select",
             "key": "prod-region"
         },
         {
-            "type": "label",
-            "title": {
-            "$ref": "#/messages/organization"
-            }
-        },
-        {
             "type": "select",
             "key": "prod-organization"
-        },
-        {
-            "type": "label",
-            "title": {
-            "$ref": "#/messages/space"
-             }
-        },
-        {
-            "type": "label",
-            "title": {
-            "$ref": "#/messages/prodStage"
-            }
         },
         {
             "type": "select",
