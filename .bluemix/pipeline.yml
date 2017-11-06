@@ -57,8 +57,8 @@ stages:
       organization: ${PROD_ORG_NAME}
       space: ${PROD_SPACE_NAME}
     DL_ASSETS: true
-    USER_ID: {{services.saucelabs.username}}
-    ACCESS: {{services.saucelabs.key}}
+    USER_ID: ${SAUCE_USERNAME}
+    #ACCESS: {{services.saucelabs.key}}
     SELECT_CMD: custom
     COMMAND: "#!/bin/bash \nexport PATH=/opt/IBM/node-v4.2/bin:$PATH \nnpm install\
       \ \nnpm install selenium-webdriver@2.53.3 \nnpm install saucelabs \nexport TEST_URL=http://example.org\n\
