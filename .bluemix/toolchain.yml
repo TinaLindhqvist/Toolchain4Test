@@ -58,6 +58,8 @@ services:
   #SauceLabs
   saucelabs:
     service_id: saucelabs
+    username: ''
+    key: ''
   #Trello
   othertool-Trello:
     service_id: customtool
