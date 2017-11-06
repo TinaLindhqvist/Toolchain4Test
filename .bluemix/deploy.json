@@ -73,6 +73,14 @@
                 "$ref": "#/messages/sauce.user"
             },
             "key": "sauce-username"
+        },
+        {
+            "type": "text",
+            "readonly": false,
+            "title": {
+                "$ref": "#/messages/sauce.key"
+            },
+            "key": "sauce-key"
         }
     ]
 }
