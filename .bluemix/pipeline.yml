@@ -46,6 +46,7 @@ stages:
   jobs:
   - name: Sauce Labs Test
     type: tester
+    enable_tests: true
     extension_id: ibm.devops.services.pipeline.saucelabs
     target:
       region_id: ${PROD_REGION_ID}
