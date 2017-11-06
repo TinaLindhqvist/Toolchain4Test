@@ -36,3 +36,15 @@ stages:
       #!/bin/bash
       # Push app
       cf push $CF_APP
+- name: TEST
+    type: tester
+    enable_tests: true
+    script: |-
+      #!/bin/bash
+      export PATH=/opt/IBM/node-v4.2/bin:$PATH 
+      npm install 
+      npm install selenium-webdriver@2.53.3 
+      npm install saucelabs 
+      export TEST_URL=https://atesttool.mybluemix.net/
+      export BUILD_DATE=console.sta-1009T151623
+      node tests/AppTestScript.js
