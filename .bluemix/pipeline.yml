@@ -37,6 +37,14 @@ stages:
       # Push app
       cf push $CF_APP
 - name: TEST
+  inputs:
+  - type: job
+    stage: BUILD
+    job: Build
+  triggers:
+  - type: stage
+  jobs:
+  - name: Sauce Labs Test
     type: tester
     enable_tests: true
     script: |-
