@@ -51,14 +51,3 @@ stages:
       region_id: ${PROD_REGION_ID}
       organization: ${PROD_ORG_NAME}
       space: ${PROD_SPACE_NAME}
-    enable_tests: true
-    SELECT_CMD: custom
-    command: |-
-      #!/bin/bash
-      export PATH=/opt/IBM/node-v4.2/bin:$PATH 
-      npm install 
-      npm install selenium-webdriver@2.53.3 
-      npm install saucelabs 
-      export TEST_URL=https://atesttool.mybluemix.net/
-      export BUILD_DATE=console.sta-1009T151623
-      node tests/AppTestScript.js
