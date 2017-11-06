@@ -15,15 +15,15 @@
     "type": "object",
     "properties": {
         "prod-region": {
-            "description": "The bluemix region",
+            "description": "Bluemix region",
             "type": "string"
         },
         "prod-organization": {
-            "description": "The bluemix org",
+            "description": "Bluemix organization",
             "type": "string"
         },
         "prod-space": {
-            "description": "The bluemix space",
+            "description": "Bluemix Test space",
             "type": "string"
         },
         "prod-app-name": {
@@ -54,14 +54,6 @@
             "key": "prod-app-name"
         },
         {
-            "type": "text",
-            "readonly": false,
-            "title": {
-                "$ref": "#/messages/sauce.user"
-            },
-            "key": "sauce-username"
-        },
-        {
             "type": "select",
             "key": "prod-region"
         },
@@ -73,6 +65,14 @@
             "type": "select",
             "key": "prod-space",
             "readonly": false
+        },
+        {
+            "type": "text",
+            "readonly": false,
+            "title": {
+                "$ref": "#/messages/sauce.user"
+            },
+            "key": "sauce-username"
         }
     ]
 }
