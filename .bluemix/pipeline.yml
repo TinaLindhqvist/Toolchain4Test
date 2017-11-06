@@ -46,8 +46,14 @@ stages:
   jobs:
   - name: Sauce Labs Test
     type: tester
+    extension_id: ibm.devops.services.pipeline.saucelabs
+    target:
+      region_id: ${PROD_REGION_ID}
+      organization: ${PROD_ORG_NAME}
+      space: ${PROD_SPACE_NAME}
     enable_tests: true
-    script: |-
+    SELECT_CMD: custom
+    command: |-
       #!/bin/bash
       export PATH=/opt/IBM/node-v4.2/bin:$PATH 
       npm install 
