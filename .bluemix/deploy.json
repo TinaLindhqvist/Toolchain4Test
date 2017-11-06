@@ -62,57 +62,41 @@
             "key": "sauce-username"
         },
         {
-            "type": "table",
-            "columnCount": 4,
-            "widths": [
-                "15%",
-                "28%",
-                "28%",
-                "28%"
-            ],
-            "items": [
-                {
-                    "type": "label",
-                    "title": "Where do we see this?"
-                },
-                {
-                    "type": "label",
-                    "title": {
-                        "$ref": "#/messages/region"
-                    }
-                },
-                {
-                    "type": "label",
-                    "title": {
-                        "$ref": "#/messages/organization"
-                    }
-                },
-                {
-                    "type": "label",
-                    "title": {
-                        "$ref": "#/messages/space"
-                    }
-                },
-                {
-                    "type": "label",
-                    "title": {
-                        "$ref": "#/messages/prodStage"
-                    }
-                },
-                {
-                    "type": "select",
-                    "key": "prod-region"
-                },
-                {
-                    "type": "select",
-                    "key": "prod-organization"
-                },
-                {
-                    "type": "select",
-                    "key": "prod-space",
-                    "readonly": false
-                }
-            ]
+            "type": "label",
+            "title": {
+            "$ref": "#/messages/region"
+            }
+        },
+        {
+            "type": "select",
+            "key": "prod-region"
+        },
+        {
+            "type": "label",
+            "title": {
+            "$ref": "#/messages/organization"
+            }
+        },
+        {
+            "type": "select",
+            "key": "prod-organization"
+        },
+        {
+            "type": "label",
+            "title": {
+            "$ref": "#/messages/space"
+             }
+        },
+        {
+            "type": "label",
+            "title": {
+            "$ref": "#/messages/prodStage"
+            }
+        },
+        {
+            "type": "select",
+            "key": "prod-space",
+            "readonly": false
         }
     ]
 }
