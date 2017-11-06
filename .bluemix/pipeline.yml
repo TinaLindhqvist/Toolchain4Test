@@ -41,10 +41,14 @@ stages:
   - type: job
     stage: BUILD
     job: Build
+  properties:
+  - name: APP_URL
+    value: https://atesttool.mybluemix.net/
+    type: text
   triggers:
   - type: stage
   jobs:
-  - name: Sauce Labs Test
+  - name: SauceLabsTest
     type: tester
     enable_tests: true
     extension_id: ibm.devops.services.pipeline.saucelabs
@@ -52,3 +56,4 @@ stages:
       region_id: ${PROD_REGION_ID}
       organization: ${PROD_ORG_NAME}
       space: ${PROD_SPACE_NAME}
+    DL_ASSETS: true
