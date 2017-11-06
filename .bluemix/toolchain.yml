@@ -48,6 +48,7 @@ services:
           PROD_SPACE_NAME: '{{form.pipeline.parameters.prod-space}}'
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
+          SAUCE_USERNAME '{{form.pipeline.parameters.sauce-username}}'
         execute: true
   #Web IDE
   webide:
