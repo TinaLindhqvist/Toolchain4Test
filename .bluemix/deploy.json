@@ -54,6 +54,14 @@
             "key": "prod-app-name"
         },
         {
+            "type": "text",
+            "readonly": false,
+            "title": {
+                "Sauce Labs User"
+            },
+            "key": "sauce-username"
+        },
+        {
             "type": "table",
             "columnCount": 4,
             "widths": [
@@ -65,7 +73,7 @@
             "items": [
                 {
                     "type": "label",
-                    "title": ""
+                    "title": "Where do we see this?"
                 },
                 {
                     "type": "label",
