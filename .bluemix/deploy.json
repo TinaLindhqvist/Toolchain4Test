@@ -57,7 +57,7 @@
             "type": "text",
             "readonly": false,
             "title": {
-                "Sauce Labs User"
+                "$ref": "#/messages/sauce.user"
             },
             "key": "sauce-username"
         },
