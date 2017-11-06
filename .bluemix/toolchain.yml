@@ -48,8 +48,10 @@ services:
           PROD_SPACE_NAME: '{{form.pipeline.parameters.prod-space}}'
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
-          SAUCE_USERNAME: '{{form.pipeline.parameters.sauce-username}}'
-          SAUCE_KEY: '{{form.pipeline.parameters.sauce-key}}'
+          SAUCE_USERNAME: '{{services.saucelabs.parameters.username}}'
+#'{{form.pipeline.parameters.sauce-username}}'
+          SAUCE_KEY: '{{services.saucelabs.parameters.key}}'
+#'{{form.pipeline.parameters.sauce-key}}'
         execute: true
   #Web IDE
   webide:
@@ -60,8 +62,9 @@ services:
   #SauceLabs
   saucelabs:
     service_id: saucelabs
-    username: ''
-    key: ''
+    parameters:
+      username: 'xxx'
+      key: 'xxx'
   #Trello
   othertool-Trello:
     service_id: customtool
