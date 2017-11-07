@@ -49,9 +49,7 @@ services:
           PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
           SAUCE_USERNAME: '{{services.saucelabs.parameters.username}}'
-#'{{form.pipeline.parameters.sauce-username}}'
           SAUCE_KEY: '{{services.saucelabs.parameters.key}}'
-#'{{form.pipeline.parameters.sauce-key}}'
         execute: true
   #Web IDE
   webide:
@@ -63,17 +61,17 @@ services:
   saucelabs:
     service_id: saucelabs
     parameters:
-      username: 'xxx'
-      key: 'xxx'
+      username: ''
+      key: ''
   #Trello
   othertool-Trello:
     service_id: customtool
     parameters:
       name: 'Trello'
-      description: 'Test App To Do'
+      description: 'TC setup information'
       type: 'Trello'
-      lifecyclePhase: 'THINK'
-      #imageUrl: trello.png
+      lifecyclePhase: 'MANAGE'
+      imageUrl: 'https://atesttool.mybluemix.net/trello.png'
       documentationUrl: 'https://tech.trello.com/'
       dashboard_url: 'https://trello.com/b/vYfDPh37/tcsetup'
   #Availability Monitoring
