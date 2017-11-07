@@ -43,7 +43,10 @@ stages:
     job: Build
   properties:
   - name: APP_URL
-    value: https://atesttool.mybluemix.net/
+    value: ${APP_URL}
+    type: text
+  - name: BUILD_DATE
+    value: 'testRUN-{{timestamp}}'
     type: text
   triggers:
   - type: stage
@@ -61,5 +64,5 @@ stages:
     ACCESS: ${SAUCE_KEY}
     SELECT_CMD: custom
     COMMAND: "#!/bin/bash \nexport PATH=/opt/IBM/node-v4.2/bin:$PATH \nnpm install\
-      \ \nnpm install selenium-webdriver@2.53.3 \nnpm install saucelabs \nexport TEST_URL=http://example.org\n\
-      export BUILD_DATE=console.stage1-1024T143925\nnode tests/AppTest.js"
+      \ \nnpm install selenium-webdriver@2.53.3 \nnpm install saucelabs\n\
+      \ node tests/AppTest.js"
