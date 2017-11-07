@@ -45,9 +45,6 @@ stages:
   - name: APP_URL
     value: ${APP_URL}
     type: text
-  - name: BUILD_DATE
-    value: 'testRUN-{{timestamp}}'
-    type: text
   triggers:
   - type: stage
   jobs:
@@ -63,6 +60,4 @@ stages:
     USER_ID: ${SAUCE_USERNAME}
     ACCESS: ${SAUCE_KEY}
     SELECT_CMD: custom
-    COMMAND: "#!/bin/bash \nexport PATH=/opt/IBM/node-v4.2/bin:$PATH \nnpm install\
-      \ \nnpm install selenium-webdriver@2.53.3 \nnpm install saucelabs\n\
-      \ node tests/AppTest.js"
+    COMMAND: "#!/bin/bash \nexport PATH=/opt/IBM/node-v4.2/bin:$PATH \nnpm install \nnpm install selenium-webdriver@2.53.3 \nnpm install saucelabs \nnode tests/AppTest.js"
