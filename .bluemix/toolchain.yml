@@ -75,8 +75,8 @@ services:
       documentationUrl: 'https://tech.trello.com/'
       dashboard_url: 'https://trello.com/b/vYfDPh37/tcsetup'
   #Availability Monitoring
-  apm:
-    service_id: apm
+  #apm:
+    #service_id: apm
 form:
   pipeline:
     parameters:
