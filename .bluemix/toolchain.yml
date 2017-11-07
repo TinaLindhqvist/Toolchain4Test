@@ -50,6 +50,7 @@ services:
           PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
           SAUCE_USERNAME: '{{services.saucelabs.parameters.username}}'
           SAUCE_KEY: '{{services.saucelabs.parameters.key}}'
+          APP_URL: 'https://{{form.pipeline.parameters.prod-app-name}}.mybluemix.net'
         execute: true
   #Web IDE
   webide:
@@ -70,13 +71,23 @@ services:
       name: 'Trello'
       description: 'TC setup information'
       type: 'Trello'
-      lifecyclePhase: 'MANAGE'
+      lifecyclePhase: 'THINK'
       imageUrl: 'https://atesttool.mybluemix.net/trello.png'
       documentationUrl: 'https://tech.trello.com/'
       dashboard_url: 'https://trello.com/b/vYfDPh37/tcsetup'
   #Availability Monitoring
   #apm:
     #service_id: apm
+  othertool-selenium:
+    service_id: customtool
+    parameters:
+      name: 'Selenium Home page'
+      description: 'Selenium Home page'
+      type: 'Selenium Home page'
+      lifecyclePhase: 'LEARN'
+      imageUrl: 'http://www.seleniumhq.org/images/selenium-logo.png'
+      documentationUrl: 
+      dashboard_url: 'http://www.seleniumhq.org/'
 form:
   pipeline:
     parameters:
