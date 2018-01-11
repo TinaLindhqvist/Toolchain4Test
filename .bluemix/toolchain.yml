@@ -11,6 +11,8 @@ template:
   required:
     - sample-build
     - sample-repo
+    - saucelabs
+    - slack
   info:
     git url: >-
       [https://github.com/TinaLindhqvist/minimal-toolchain](https://github.com/TinaLindhqvist/minimal-toolchain)
@@ -91,6 +93,6 @@ services:
 form:
   pipeline:
     parameters:
-      prod-app-name: '{{services.sample-repo.parameters.repo_name}}'
+      #prod-app-name: 
     schema:
       $ref: deploy.json
